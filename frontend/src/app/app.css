@@ -1,0 +1,82 @@
+.container {
+  max-width: 700px;
+  margin: 30px auto;
+  font-family: Arial, sans-serif;
+  padding: 0 15px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.formulario {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.formulario input {
+  flex: 1;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.formulario button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.formulario button:hover {
+  background-color: #218838;
+}
+
+hr {
+  margin: 25px 0;
+  border: 0;
+  border-top: 1px solid #eee;
+}
+
+.contenedor-notas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.nota-card {
+  background-color: #fff9c4;
+  border: 1px solid #fbc02d;
+  border-radius: 6px;
+  padding: 15px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+  word-wrap: break-word;
+}
+
+.nota-card h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: #5d4037;
+  font-size: 16px;
+  border-bottom: 1px dashed #fbc02d;
+  padding-bottom: 4px;
+}
+
+.nota-card p {
+  margin: 0;
+  color: #424242;
+  font-size: 14px;
+  white-space: pre-wrap;
+}
+
+.vacio {
+  color: #888;
+  font-style: italic;
+}

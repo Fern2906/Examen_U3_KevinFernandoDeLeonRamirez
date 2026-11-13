@@ -1,0 +1,38 @@
+<div class="container">
+  <h1>Notas</h1>
+
+  <form class="formulario" (ngSubmit)="guardarNota()">
+    <input
+      type="text"
+      placeholder="Título de la nota"
+      [(ngModel)]="titulo"
+      name="titulo"
+      required
+    />
+
+    <input
+      type="text"
+      placeholder="Contenido de la nota"
+      [(ngModel)]="contenido"
+      name="contenido"
+      required
+    />
+
+    <button type="submit">Guardar</button>
+  </form>
+
+  <hr />
+
+  <h2>Mis Notas</h2>
+
+  <div class="contenedor-notas">
+    @for (nota of notaService.notas(); track nota._id || $index) {
+      <div class="nota-card">
+        <h3>{{ nota.titulo }}</h3>
+        <p>{{ nota.contenido }}</p>
+      </div>
+    } @empty {
+      <p class="vacio">No hay notas registradas. ¡Agrega una nota arriba!</p>
+    }
+  </div>
+</div>
